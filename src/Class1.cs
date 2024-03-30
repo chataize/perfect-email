@@ -1,4 +1,4 @@
-﻿namespace PerfectEmail;
+﻿namespace ChatAIze.PerfectEmail;
 
 public class Class1
 {
