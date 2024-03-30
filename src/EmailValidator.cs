@@ -6,7 +6,7 @@ public static class EmailValidator
 
     public static bool IsValidEmail(string? email)
     {
-        if (email == null || email.Length < 6 || email.Length > 100)
+        if (email == null || email.Length < 6 || email.Length > 100 || email[0] == '-' || email[0] == '+')
         {
             return false;
         }
