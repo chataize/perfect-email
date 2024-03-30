@@ -20,60 +20,44 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>https://github.com/chataize/perfect-email/releases</PackageReleaseNotes>
     <PackageTags>
-      address, address check, address checker, address parser, address validation, address
-      validator, attribute, chataize, check, checker, detect, detection, detector, disposable,
-      disposable detection, disposable domain, disposable domain checker, disposable domain
-      detection, disposable domain detector, disposable email, disposable email checker, disposable
-      email detection, disposable email detector, disposable email domain, disposable email domain
-      checker, disposable email domain detection, disposable email domain detector, disposable mail,
-      disposable mail checker, disposable mail detection, disposable mail detector, disposable mail
-      domain, disposable mail domain checker, disposable mail domain detection, disposable mail
-      domain detector, domain, dotnet, email, email address, email address check, email address
-      checker, email address parser, email address validation, email address validator, email
-      checker, email parser, email validation, email validator, fake, fake email, fake email
-      address, fake email address check, fake email address checker, fake email address detection,
-      fake email address detector, fake email checker, fake email detection, fake mail, fake mail
-      address, fake mail address checker, fake mail address detection, fake mail address detector,
+      address, address, address, address, address check, address checker, address checker, address
+      parser, address validation, attribute, chataize, check, check, check, checker, checker,
+      checker, checker, checker, checker, detect, detection, detection, detection, detection,
+      detection, detection, detection, detector, disposable, disposable, disposable detection,
+      disposable domain, disposable domain, disposable domain checker, disposable domain detector,
+      disposable email, disposable email checker, disposable email detector, disposable email
+      domain, disposable email domain, disposable email domain detection, disposable email domain
+      detector, disposable mail, disposable mail, disposable mail, disposable mail checker,
+      disposable mail detection, disposable mail detector, disposable mail domain checker,
+      disposable mail domain detection, domain, domain, domain checker, domain checker, domain
+      detector, dotnet, email, email, email address, email address, email address check, email
+      address parser, email address validation, email address validator, email checker, email
+      detection, email domain detection, email parser, email validation, email validator, fake, fake
+      email, fake email, fake email address check, fake email address checker, fake email address
+      detection, fake email address detector, fake email checker, fake email detection, fake mail,
+      fake mail, fake mail address checker, fake mail address detection, fake mail address detector,
       fake mail check, fake mail checker, fake mail detection, helper, helper library, inbox, input,
-      insant, instant domain, instant domain checker, instant domain detection, instant domain
-      detector, instant email, instant email checker, instant email detection, instant email
-      detector, instant email domain, instant email domain checker, instant email domain detection,
-      instant email domain detector, instant mail, instant mail checker, instant mail detection,
-      instant mail detector, instant mail domain, instant mail domain checker, instant mail domain
-      detection, instant mail domain detector, invalid, invalid email, invalid email address,
-      invalid email address check, invalid email address checker, invalid email address detection,
-      invalid email address detector, invalid email check, invalid email checker, invalid email
-      detection, invalid mail, invalid mail address, invalid mail address check, invalid mail
-      address checker, invalid mail address detection, invalid mail address detector, invalid mail
-      check, invalid mail checker, invalid mail detection, junk, junk email, junk email address,
-      junk email address check, junk email address checker, junk email address detection, junk email
-      address detector, junk email check, junk email checker, junk email detection, junk mail, junk
-      mail address, junk mail address check, junk mail address checker, junk mail address detection,
-      junk mail address detector, junk mail check, junk mail checker, junk mail detection, junk mail
-      detector, library, mail, mail box, mail check, mail checker, mail parser, mail validation,
-      mail validator, mailbox, one time, one time domain, one time domain checker, one time domain
-      detection, one time domain detector, one time email, one time email checker, one time email
-      detection, one time email detector, one time email domain, one time email domain checker, one
-      time email domain detection, one time email domain detector, one time mail, one time mail
-      checker, one time mail detection, one time mail detector, one time mail domain, one time mail
-      domain checker, one time mail domain detection, one time mail domain detector, parser,
-      security, spam, spam email, spam email address, spam email address check, spam email address
-      checker, spam email address detection, spam email address detector, spam email check, spam
-      email checker, spam email detection, spam mail, spam mail address, spam mail address check,
-      spam mail address checker, spam mail address detection, spam mail address detector, spam mail
-      check, spam mail checker, spam mail detection, spam mail detector, temp, temp domain, temp
-      domain checker, temp domain detection, temp domain detector, temp email, temp email checker,
-      temp email detection, temp email detector, temp email domain, temp email domain checker, temp
-      email domain detection, temp email domain detector, temp mail, temp mail checker, temp mail
-      detection, temp mail detector, temp mail domain, temp mail domain checker, temp mail domain
-      detection, temp mail domain detector, temporary, temporary domain, temporary domain checker,
-      temporary domain detection, temporary domain detector, temporary email, temporary email
-      checker, temporary email detection, temporary email detector, temporary email domain,
-      temporary email domain checker, temporary email domain detection, temporary email domain
-      detector, temporary mail, temporary mail checker, temporary mail detection, temporary mail
-      detector, temporary mail domain, temporary mail domain checker, temporary mail domain
-      detection, temporary mail domain detector, tool, utility, valid, validate, validation,
-      validator
+      instant, invalid, invalid email, invalid email, invalid email address, invalid email address
+      check, invalid email address checker, invalid email address detection, invalid email address
+      detector, invalid email check, invalid email checker, invalid mail, invalid mail, invalid
+      mail, invalid mail address, invalid mail address check, invalid mail address detection,
+      invalid mail address detector, invalid mail checker, invalid mail detection, junk, library,
+      mail, mail box, mail check, mail checker, mail parser, mail validation, mail validator,
+      mailbox, one, one time, one time domain, one time domain, one time domain checker, one time
+      domain detector, one time email, one time email, one time email checker, one time email
+      detector, one time email domain, one time email domain checker, one time email domain
+      detector, one time mail, one time mail, one time mail, one time mail detection, one time mail
+      detector, one time mail domain, one time mail domain detection, one time mail domain detector,
+      parser, security, spam, spam, spam email, spam email address, spam email address, spam email
+      address check, spam email address detection, spam email address detector, spam email check,
+      spam email detection, spam mail, spam mail, spam mail address, spam mail address check, spam
+      mail address checker, spam mail address detection, spam mail address detector, spam mail
+      checker, spam mail detection, spam mail detector, temp, temp, temp, temp domain, temp domain
+      detection, temp domain detector, temp email, temp email checker, temp email detection, temp
+      email detector, temp email domain, temp email domain checker, temp email domain detector, temp
+      mail, temp mail, temp mail checker, temp mail detector, temp mail domain, temp mail domain,
+      temp mail domain checker, temp mail domain detector, temporary, time email domain detection,
+      tool, utility, valid, validate, validation, validator, validator
     </PackageTags>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
