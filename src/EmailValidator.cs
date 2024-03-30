@@ -13,11 +13,21 @@ public static class EmailValidator
 
         var atIndex = -1;
         var lastDotIndex = -1;
-        var isLastCharDigit = false;
+        var isLastPartInvalid = false;
 
         for (int i = 0; i < email.Length; i++)
         {
             var currentChar = email[i];
+
+            if (atIndex != -1 && currentChar == '+')
+            {
+                return false;
+            }
+
+            if (atIndex != -1 && (currentChar == '-' || currentChar == '.') && (email[i - 1] == '-' || email[i - 1] == '.'))
+            {
+                return false;
+            }
 
             if (currentChar == '@')
             {
@@ -38,13 +48,8 @@ public static class EmailValidator
                 }
 
                 lastDotIndex = i;
-                isLastCharDigit = false;
+                isLastPartInvalid = false;
                 continue;
-            }
-
-            if (atIndex != -1 && (currentChar == '-' || currentChar == '+'))
-            {
-                return false;
             }
 
             if (!ValidCharacters.Contains(currentChar))
@@ -52,12 +57,12 @@ public static class EmailValidator
                 return false;
             }
 
-            if (char.IsDigit(currentChar))
+            if (currentChar == '-' || char.IsDigit(currentChar))
             {
-                isLastCharDigit = true;
+                isLastPartInvalid = true;
             }
         }
 
-        return atIndex != -1 && lastDotIndex > atIndex && email.Length - lastDotIndex >= 3 && !isLastCharDigit;
+        return atIndex != -1 && lastDotIndex > atIndex && email.Length - lastDotIndex >= 3 && !isLastPartInvalid;
     }
 }
