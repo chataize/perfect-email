@@ -1,24 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <AssemblyName>ChatAIze.PerfectEmail</AssemblyName>
-    <RootNamespace>ChatAIze.PerfectEmail</RootNamespace>
-    <PackageId>ChatAIze.PerfectEmail</PackageId>
-    <PackageVersion>0.1.0</PackageVersion>
-    <Product>ChatAIze</Product>
+    <Product>Perfect Email</Product>
+    <Version>0.1.0</Version>
     <Company>ChatAIze</Company>
     <Authors>Marcel Kwiatkowski</Authors>
     <Copyright>© ChatAIze 2024</Copyright>
-    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <AssemblyName>ChatAIze.PerfectEmail</AssemblyName>
+    <RootNamespace>ChatAIze.PerfectEmail</RootNamespace>
+    <PackageId>ChatAIze.PerfectEmail</PackageId>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://www.chataize.com</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/chataize/perfect-email</RepositoryUrl>
+    <PackageReleaseNotes>https://github.com/chataize/perfect-email/releases</PackageReleaseNotes>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/chataize/perfect-email</RepositoryUrl>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
     <Description>
       An easy-to-use, high-performance email validator for C# .NET 8.0 with custom attribute and
       disposable domain detection.
     </Description>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>https://github.com/chataize/perfect-email/releases</PackageReleaseNotes>
     <PackageTags>
       address, address, address, address, address check, address checker, address checker, address
       parser, address validation, attribute, chataize, check, check, check, checker, checker,
@@ -59,17 +62,9 @@
       temp mail domain checker, temp mail domain detector, temporary, time email domain detection,
       tool, utility, valid, validate, validation, validator, validator
     </PackageTags>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <None
-        Include="icon.png"
-        Pack="true"
-        PackagePath="\" />
-    <None
-        Include="../README.md"
-        Pack="true"
-        PackagePath="" />
+    <None Include="icon.png" Pack="true" PackagePath="\" />
+    <None Include="../README.md" Pack="true" PackagePath="" />
   </ItemGroup>
 </Project>
