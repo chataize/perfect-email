@@ -15,7 +15,7 @@ public static class EmailValidator
         var lastDotIndex = -1;
         var isLastPartInvalid = false;
 
-        for (int i = 0; i < email.Length; i++)
+        for (var i = 0; i < email.Length; i++)
         {
             var currentChar = email[i];
 
