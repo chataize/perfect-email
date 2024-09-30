@@ -2,14 +2,19 @@ namespace ChatAIze.PerfectEmail;
 
 public static class EmailNormalizer
 {
-    public static string NormalizeEmail(string email)
+    public static string? NormalizeEmail(string? email)
     {
-        if (!EmailValidator.IsValidEmail(email))
+        if (string.IsNullOrWhiteSpace(email))
         {
-            throw new ArgumentException("Invalid email address.", nameof(email));
+            return null;
         }
 
         email = email.Trim().ToLowerInvariant();
+
+        if (!EmailValidator.IsValidEmail(email))
+        {
+            return null;
+        }
 
         var parts = email.Split('@');
         var localPart = parts[0];
