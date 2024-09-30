@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Product>Perfect Email</Product>
-    <Version>0.1.1</Version>
+    <Version>0.2.0</Version>
     <Company>ChatAIze</Company>
     <Authors>Marcel Kwiatkowski</Authors>
     <Copyright>© ChatAIze 2024</Copyright>
