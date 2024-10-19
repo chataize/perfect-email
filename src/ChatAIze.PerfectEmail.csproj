@@ -1,5 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <Title>Perfect Email</Title>
     <Product>Perfect Email</Product>
     <Version>0.2.1</Version>
     <Company>ChatAIze</Company>
@@ -64,7 +65,13 @@
     </PackageTags>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="icon.png" Pack="true" PackagePath="\" />
-    <None Include="../README.md" Pack="true" PackagePath="" />
+    <None
+        Include="icon.png"
+        Pack="true"
+        PackagePath="\" />
+    <None
+        Include="../README.md"
+        Pack="true"
+        PackagePath="" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,84 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Title>Perfect Email Test</Title>
+    <Product>Perfect Email</Product>
+    <Version>0.2.1</Version>
+    <Company>ChatAIze</Company>
+    <Authors>Marcel Kwiatkowski</Authors>
+    <Copyright>© ChatAIze 2024</Copyright>
+    <AssemblyName>ChatAIze.PerfectEmail.Test</AssemblyName>
+    <RootNamespace>ChatAIze.PerfectEmail.Test</RootNamespace>
+    <PackageId>ChatAIze.PerfectEmail.Test</PackageId>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://www.chataize.com</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/chataize/perfect-email/releases</PackageReleaseNotes>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/chataize/perfect-email</RepositoryUrl>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <Description>Test project for Perfect Email library.</Description>
+    <PackageTags>
+      address, address, address, address, address check, address checker, address checker, address
+      parser, address validation, attribute, chataize, check, check, check, checker, checker,
+      checker, checker, checker, checker, detect, detection, detection, detection, detection,
+      detection, detection, detection, detector, disposable, disposable, disposable detection,
+      disposable domain, disposable domain, disposable domain checker, disposable domain detector,
+      disposable email, disposable email checker, disposable email detector, disposable email
+      domain, disposable email domain, disposable email domain detection, disposable email domain
+      detector, disposable mail, disposable mail, disposable mail, disposable mail checker,
+      disposable mail detection, disposable mail detector, disposable mail domain checker,
+      disposable mail domain detection, domain, domain, domain checker, domain checker, domain
+      detector, dotnet, email, email, email address, email address, email address check, email
+      address parser, email address validation, email address validator, email checker, email
+      detection, email domain detection, email parser, email validation, email validator, fake, fake
+      email, fake email, fake email address check, fake email address checker, fake email address
+      detection, fake email address detector, fake email checker, fake email detection, fake mail,
+      fake mail, fake mail address checker, fake mail address detection, fake mail address detector,
+      fake mail check, fake mail checker, fake mail detection, helper, helper library, inbox, input,
+      instant, invalid, invalid email, invalid email, invalid email address, invalid email address
+      check, invalid email address checker, invalid email address detection, invalid email address
+      detector, invalid email check, invalid email checker, invalid mail, invalid mail, invalid
+      mail, invalid mail address, invalid mail address check, invalid mail address detection,
+      invalid mail address detector, invalid mail checker, invalid mail detection, junk, library,
+      mail, mail box, mail check, mail checker, mail parser, mail validation, mail validator,
+      mailbox, one, one time, one time domain, one time domain, one time domain checker, one time
+      domain detector, one time email, one time email, one time email checker, one time email
+      detector, one time email domain, one time email domain checker, one time email domain
+      detector, one time mail, one time mail, one time mail, one time mail detection, one time mail
+      detector, one time mail domain, one time mail domain detection, one time mail domain detector,
+      parser, security, spam, spam, spam email, spam email address, spam email address, spam email
+      address check, spam email address detection, spam email address detector, spam email check,
+      spam email detection, spam mail, spam mail, spam mail address, spam mail address check, spam
+      mail address checker, spam mail address detection, spam mail address detector, spam mail
+      checker, spam mail detection, spam mail detector, temp, temp, temp, temp domain, temp domain
+      detection, temp domain detector, temp email, temp email checker, temp email detection, temp
+      email detector, temp email domain, temp email domain checker, temp email domain detector, temp
+      mail, temp mail, temp mail checker, temp mail detector, temp mail domain, temp mail domain,
+      temp mail domain checker, temp mail domain detector, temporary, time email domain detection,
+      tool, utility, valid, validate, validation, validator, validator
+    </PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference
+        Include="coverlet.collector"
+        Version="6.0.2" />
+    <PackageReference
+        Include="Microsoft.NET.Test.Sdk"
+        Version="17.11.1" />
+    <PackageReference
+        Include="MSTest.TestAdapter"
+        Version="3.6.1" />
+    <PackageReference
+        Include="MSTest.TestFramework"
+        Version="3.6.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
+    <ProjectReference Include="..\src\ChatAIze.PerfectEmail.csproj" />
+  </ItemGroup>
+</Project>
