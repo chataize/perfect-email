@@ -19,6 +19,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <InvariantGlobalization>true</InvariantGlobalization>
     <Description>
       An easy-to-use, high-performance email validator for C# .NET 9.0 with custom attribute and
       disposable domain detection.
@@ -65,13 +66,7 @@
     </PackageTags>
   </PropertyGroup>
   <ItemGroup>
-    <None
-        Include="icon.png"
-        Pack="true"
-        PackagePath="\" />
-    <None
-        Include="../README.md"
-        Pack="true"
-        PackagePath="" />
+    <None Include="icon.png" Pack="true" PackagePath="\" />
+    <None Include="../README.md" Pack="true" PackagePath="" />
   </ItemGroup>
 </Project>
