@@ -16,9 +16,13 @@
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/chataize/perfect-email</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <SuppressSymbolPackageFormatValidation>true</SuppressSymbolPackageFormatValidation>
     <Description>
       An easy-to-use, high-performance email validator for C# .NET 9.0 with custom attribute and
       disposable domain detection.

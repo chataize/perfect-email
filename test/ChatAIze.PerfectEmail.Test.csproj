@@ -16,11 +16,15 @@
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/chataize/perfect-email</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <SuppressSymbolPackageFormatValidation>true</SuppressSymbolPackageFormatValidation>
     <Description>Test project for Perfect Email library.</Description>
     <PackageTags>
       address, address, address, address, address check, address checker, address checker, address
