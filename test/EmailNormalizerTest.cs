@@ -31,8 +31,8 @@ namespace ChatAIze.PerfectEmail.Test
         [DataRow("aa+aa@a.aa", "aa@a.aa")]
         public void NormalizeEmailTest(string email, object expected)
         {
-            var result = EmailNormalizer.NormalizeEmail(email);
-            Assert.AreEqual(expected, result);
+            var actual = EmailNormalizer.NormalizeEmail(email);
+            Assert.AreEqual(expected, actual);
         }
     }
 }

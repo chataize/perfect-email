@@ -20,8 +20,8 @@ public sealed class DisposableEmailDetectorTest
     [DataRow("someone@0-mail.com", true)]
     public void IsDisposableEmailTest(string? email, bool expected)
     {
-        var result = DisposableEmailDetector.IsDisposableEmail(email);
-        Assert.AreEqual(result, expected);
+        var actual = DisposableEmailDetector.IsDisposableEmail(email);
+        Assert.AreEqual(expected, actual);
     }
 
     [DataTestMethod]
@@ -35,7 +35,7 @@ public sealed class DisposableEmailDetectorTest
     [DataRow("0-MaIL.cOm", true)]
     public void IsDisposableEmailDomainTest(string? email, bool expected)
     {
-        var result = DisposableEmailDetector.IsDisposableEmailDomain(email);
-        Assert.AreEqual(result, expected);
+        var actual = DisposableEmailDetector.IsDisposableEmailDomain(email);
+        Assert.AreEqual(expected, actual);
     }
 }

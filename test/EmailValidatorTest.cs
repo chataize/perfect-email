@@ -50,7 +50,7 @@ public class EmailValidatorTest
     [DataRow("a++a@a.aa", true)]
     public void IsValidEmailTest(string? email, bool expected)
     {
-        var result = EmailValidator.IsValidEmail(email);
-        Assert.AreEqual(result, expected);
+        var actual = EmailValidator.IsValidEmail(email);
+        Assert.AreEqual(expected, actual);
     }
 }
