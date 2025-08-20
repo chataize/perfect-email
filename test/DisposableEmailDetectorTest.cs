@@ -3,7 +3,7 @@ namespace ChatAIze.PerfectEmail.Test;
 [TestClass]
 public sealed class DisposableEmailDetectorTest
 {
-    [DataTestMethod]
+    [TestMethod]
     [DataRow(null, false)]
     [DataRow("", false)]
     [DataRow("someone", false)]
@@ -24,7 +24,7 @@ public sealed class DisposableEmailDetectorTest
         Assert.AreEqual(expected, actual);
     }
 
-    [DataTestMethod]
+    [TestMethod]
     [DataRow(null, false)]
     [DataRow("", false)]
     [DataRow("x", false)]

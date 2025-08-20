@@ -3,7 +3,7 @@ namespace ChatAIze.PerfectEmail.Test;
 [TestClass]
 public class EmailValidatorTest
 {
-    [DataTestMethod]
+    [TestMethod]
     [DataRow(null, false)]
     [DataRow("", false)]
     [DataRow("        ", false)]
