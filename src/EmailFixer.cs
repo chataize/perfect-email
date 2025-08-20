@@ -50,7 +50,7 @@ public static class EmailFixer
         "yaohoo.com", "yaoo.com", "yhaoo.com", "yhoo.com"
     };
 
-    public static string FixTypos(string email)
+    public static string FixEmail(string email)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(email, nameof(email));
 
