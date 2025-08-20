@@ -54,12 +54,12 @@ public static class EmailTypos
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(email, nameof(email));
 
+        email = email.Trim().ToLowerInvariant();
+
         if (!EmailValidator.IsValidEmail(email))
         {
             throw new ArgumentException("Invalid email format.", nameof(email));
         }
-
-        email = email.Trim().ToLowerInvariant();
 
         var at = email.LastIndexOf('@');
         if (at <= 0 || at == email.Length - 1)
