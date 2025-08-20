@@ -1,6 +1,6 @@
 namespace ChatAIze.PerfectEmail;
 
-public static class EmailTypos
+public static class EmailFixer
 {
     private const string CanonGmail = "gmail.com";
 
