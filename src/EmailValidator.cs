@@ -2,7 +2,7 @@ namespace ChatAIze.PerfectEmail;
 
 public static class EmailValidator
 {
-    private const string ValidCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.-+@";
+    private const string ValidCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.-+@_";
 
     public static bool IsValidEmail(string? email)
     {
@@ -50,6 +50,11 @@ public static class EmailValidator
                 lastDotIndex = i;
                 isLastPartInvalid = false;
                 continue;
+            }
+
+            if (currentChar == '_' && (atIndex != -1 || i == 0 || i == email.Length - 1 || !char.IsLetterOrDigit(email[i - 1]) || !char.IsLetterOrDigit(email[i + 1])))
+            {
+                return false;
             }
 
             if (!ValidCharacters.Contains(currentChar))
