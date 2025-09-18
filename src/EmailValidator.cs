@@ -42,13 +42,17 @@ public static class EmailValidator
 
             if (currentChar == '.')
             {
-                if (atIndex != -1 && (email[i - 1] == '.' || email[i - 1] == '@'))
+                if (i == 0 || i == email.Length - 1 || !char.IsLetterOrDigit(email[i - 1]) || !char.IsLetterOrDigit(email[i + 1]))
                 {
                     return false;
                 }
 
-                lastDotIndex = i;
-                isLastPartInvalid = false;
+                if (atIndex != -1)
+                {
+                    lastDotIndex = i;
+                    isLastPartInvalid = false;
+                }
+
                 continue;
             }
 
