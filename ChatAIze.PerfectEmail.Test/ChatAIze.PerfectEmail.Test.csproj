@@ -79,6 +79,6 @@
   </ItemGroup>
   <ItemGroup>
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
-    <ProjectReference Include="..\src\ChatAIze.PerfectEmail.csproj" />
+    <ProjectReference Include="..\ChatAIze.PerfectEmail\ChatAIze.PerfectEmail.csproj" />
   </ItemGroup>
 </Project>
