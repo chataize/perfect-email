@@ -1,4 +1,4 @@
 ﻿<Solution>
-  <Project Path="src/ChatAIze.PerfectEmail.csproj" />
+  <Project Path="ChatAIze.PerfectEmail/ChatAIze.PerfectEmail.csproj" />
   <Project Path="test/ChatAIze.PerfectEmail.Test.csproj" />
 </Solution>
