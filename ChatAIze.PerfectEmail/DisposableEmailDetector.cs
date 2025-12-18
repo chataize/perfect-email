@@ -4099,6 +4099,7 @@ public static class DisposableEmailDetector
             return false;
         }
 
+        // Accept either a full address or a domain-only input.
         var domain = email.Split('@').LastOrDefault();
         return domain != null && IsDisposableEmailDomain(domain);
     }
@@ -4110,6 +4111,7 @@ public static class DisposableEmailDetector
             return false;
         }
 
+        // Normalize domain casing/whitespace before lookup.
         var normalizedDomain = domain.Trim().ToLowerInvariant();
         return DisposableDomains.Contains(normalizedDomain);
     }

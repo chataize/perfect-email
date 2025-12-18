@@ -9,6 +9,7 @@ public static class EmailNormalizer
             return null;
         }
 
+        // Normalize case/whitespace so validation and output are consistent.
         email = email.Trim().ToLowerInvariant();
 
         if (!EmailValidator.IsValidEmail(email))
@@ -23,6 +24,7 @@ public static class EmailNormalizer
 
         if (plusIndex != -1)
         {
+            // Strip sub-addressing (e.g., "name+tag") for canonical comparisons.
             localPart = localPart[..plusIndex];
         }
 

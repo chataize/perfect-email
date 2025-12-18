@@ -54,6 +54,7 @@ public static class EmailFixer
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(email, nameof(email));
 
+        // Normalize before validation and correction to avoid case/whitespace mismatches.
         email = email.Trim().ToLowerInvariant();
 
         if (!EmailValidator.IsValidEmail(email))
@@ -77,12 +78,14 @@ public static class EmailFixer
             return email;
         }
 
+        // Prefer exact typo lists; fall back to a single-edit fuzzy match to limit false positives.
         var corrected = TryExact(domain) ?? TryFuzzySafely(domain);
         return corrected is null ? email : string.Concat(email.AsSpan(0, at), "@", corrected);
     }
 
     private static string? TryExact(ReadOnlySpan<char> domain)
     {
+        // Known typos map deterministically to canonical providers.
         var domainString = domain.ToString();
 
         if (GmailTypos.Contains(domainString))
@@ -117,6 +120,7 @@ public static class EmailFixer
     {
         if (domain.IsEmpty) return null;
 
+        // First-letter bucketing keeps fuzzy matching scoped to the intended provider.
         switch (domain[0])
         {
             case 'g':
@@ -156,6 +160,7 @@ public static class EmailFixer
 
     private static bool IsDamerauLeq1(ReadOnlySpan<char> a, ReadOnlySpan<char> b)
     {
+        // Fast check for Damerau-Levenshtein distance <= 1 without allocating a full matrix.
         if (a.SequenceEqual(b))
         {
             return true;
@@ -175,6 +180,7 @@ public static class EmailFixer
             var first = -1;
             var second = -1;
 
+            // With equal lengths, allow one substitution or a single adjacent transposition.
             for (var i = 0; i < na; i++)
             {
                 if (a[i] == b[i])
@@ -203,6 +209,7 @@ public static class EmailFixer
             return second == first + 1 && a[first] == b[second] && a[second] == b[first];
         }
 
+        // Lengths differ by one: allow a single insertion/deletion.
         var i2 = 0;
         var j = 0;
         var edits = 0;
