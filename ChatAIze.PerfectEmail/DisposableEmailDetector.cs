@@ -2,6 +2,13 @@ using System.Collections.Frozen;
 
 namespace ChatAIze.PerfectEmail;
 
+/// <summary>
+/// Detects disposable email addresses and domains.
+/// </summary>
+/// <remarks>
+/// Uses an embedded domain list sourced from https://github.com/disposable-email-domains/disposable-email-domains.
+/// Matching is an exact, case-insensitive lookup; no DNS or MX checks are performed.
+/// </remarks>
 public static class DisposableEmailDetector
 {
     // Source: https://github.com/disposable-email-domains/disposable-email-domains
@@ -4092,6 +4099,15 @@ public static class DisposableEmailDetector
     }
     .ToFrozenSet();
 
+    /// <summary>
+    /// Determines whether an email or domain is disposable.
+    /// </summary>
+    /// <param name="email">An email address or a domain string.</param>
+    /// <returns>True if the domain is in the disposable list; otherwise false.</returns>
+    /// <remarks>
+    /// If an '@' is present, the portion after the last '@' is treated as the domain; otherwise the
+    /// input is treated as a domain.
+    /// </remarks>
     public static bool IsDisposableEmail(string? email)
     {
         if (email == null)
@@ -4104,6 +4120,12 @@ public static class DisposableEmailDetector
         return domain != null && IsDisposableEmailDomain(domain);
     }
 
+    /// <summary>
+    /// Determines whether a domain is disposable.
+    /// </summary>
+    /// <param name="domain">The domain to check.</param>
+    /// <returns>True if the domain is in the disposable list; otherwise false.</returns>
+    /// <remarks>Leading/trailing whitespace is trimmed and the domain is lowercased before lookup.</remarks>
     public static bool IsDisposableEmailDomain(string? domain)
     {
         if (domain == null)

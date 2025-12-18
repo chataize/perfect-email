@@ -1,5 +1,12 @@
 namespace ChatAIze.PerfectEmail;
 
+/// <summary>
+/// Normalizes email addresses and corrects common provider-domain typos for popular providers.
+/// </summary>
+/// <remarks>
+/// Normalization trims and lowercases the input. The local part is not otherwise changed, and
+/// unknown domains are not corrected beyond normalization.
+/// </remarks>
 public static class EmailFixer
 {
     private const string CanonGmail = "gmail.com";
@@ -50,6 +57,17 @@ public static class EmailFixer
         "yaohoo.com", "yaoo.com", "yhaoo.com", "yhoo.com"
     };
 
+    /// <summary>
+    /// Trims, lowercases, validates, and fixes common typos in popular provider domains.
+    /// </summary>
+    /// <param name="email">The email address to normalize and fix.</param>
+    /// <returns>The normalized email address, optionally with a corrected provider domain.</returns>
+    /// <exception cref="ArgumentNullException">Thrown when <paramref name="email"/> is null.</exception>
+    /// <exception cref="ArgumentException">Thrown when <paramref name="email"/> is empty, whitespace, or invalid.</exception>
+    /// <remarks>
+    /// Only domains for Gmail, Hotmail, iCloud, Outlook, and Yahoo are corrected. Fuzzy matching is
+    /// limited to a single edit to reduce false positives.
+    /// </remarks>
     public static string FixEmail(string email)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(email, nameof(email));
@@ -83,6 +101,11 @@ public static class EmailFixer
         return corrected is null ? email : string.Concat(email.AsSpan(0, at), "@", corrected);
     }
 
+    /// <summary>
+    /// Attempts an exact typo lookup for known provider domains.
+    /// </summary>
+    /// <param name="domain">The domain portion to check.</param>
+    /// <returns>The corrected canonical domain if matched; otherwise null.</returns>
     private static string? TryExact(ReadOnlySpan<char> domain)
     {
         // Known typos map deterministically to canonical providers.
@@ -116,6 +139,11 @@ public static class EmailFixer
         return null;
     }
 
+    /// <summary>
+    /// Attempts a fuzzy match (edit distance &lt;= 1) scoped to known providers.
+    /// </summary>
+    /// <param name="domain">The domain portion to check.</param>
+    /// <returns>The corrected canonical domain if matched; otherwise null.</returns>
     private static string? TryFuzzySafely(ReadOnlySpan<char> domain)
     {
         if (domain.IsEmpty) return null;
@@ -158,6 +186,17 @@ public static class EmailFixer
         return null;
     }
 
+    /// <summary>
+    /// Checks whether two strings are within a Damerau-Levenshtein distance of 1.
+    /// </summary>
+    /// <param name="a">The first string span.</param>
+    /// <param name="b">The second string span.</param>
+    /// <returns>
+    /// True for equality, one substitution, one adjacent transposition, or one insertion/deletion; otherwise false.
+    /// </returns>
+    /// <remarks>
+    /// This is a distance &lt;= 1 check only; it does not compute full edit distance values.
+    /// </remarks>
     private static bool IsDamerauLeq1(ReadOnlySpan<char> a, ReadOnlySpan<char> b)
     {
         // Fast check for Damerau-Levenshtein distance <= 1 without allocating a full matrix.

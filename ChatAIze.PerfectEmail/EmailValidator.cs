@@ -1,9 +1,29 @@
 namespace ChatAIze.PerfectEmail;
 
+/// <summary>
+/// Validates email addresses using lightweight rules suitable for common forms.
+/// </summary>
+/// <remarks>
+/// These checks are intentionally simpler than full RFC 5322 validation and focus on:
+/// <list type="bullet">
+/// <item><description>Length 6-100 and not starting with '+' or '-'.</description></item>
+/// <item><description>Exactly one '@' with at least one '.' after it.</description></item>
+/// <item><description>Allowed characters: letters, digits, '.', '-', '+', '@', '_'.</description></item>
+/// <item><description>'+' allowed only in the local part; '_' allowed only in the local part and must be between alphanumerics.</description></item>
+/// <item><description>Dots must be between alphanumerics; in the domain, '.' and '-' cannot be adjacent.</description></item>
+/// <item><description>Final domain segment length &gt;= 2 and contains no digits or '-'.</description></item>
+/// </list>
+/// </remarks>
 public static class EmailValidator
 {
     private const string ValidCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.-+@_";
 
+    /// <summary>
+    /// Determines whether the provided email is considered valid by the library's rules.
+    /// </summary>
+    /// <param name="email">The email address to validate.</param>
+    /// <returns>True when the email passes validation; otherwise false.</returns>
+    /// <remarks>The input is evaluated as-is; trim whitespace before calling if needed.</remarks>
     public static bool IsValidEmail(string? email)
     {
         // Quick rejects for null, length, or invalid starting characters.
