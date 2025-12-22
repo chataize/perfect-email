@@ -21,6 +21,7 @@ Perfect Email is a fast, lightweight C# library for validating and normalizing e
 - [Performance Notes](#performance-notes)
 - [Thread Safety](#thread-safety)
 - [Target Framework](#target-framework)
+- [Links](#links)
 - [License](#license)
 - [Contributing](#contributing)
 
@@ -266,6 +267,11 @@ All validation rules from `EmailValidator` apply before correction.
 ## Target Framework
 
 - net10.0
+
+## Links
+- GitHub: https://github.com/chataize/perfect-email
+- Chataize organization: https://github.com/chataize
+- Website: https://www.chataize.com
 
 ## License
 
